@@ -3,6 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  .col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+body .carousel-indicators li{
+  background-color:red;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+  background-color:red;
+}
+body .no-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
 * {
   box-sizing: border-box;
 }
@@ -67,7 +86,11 @@ h1 {
   }
 }
 </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <body>
 
 <!-- MAIN (Center website) -->
@@ -82,38 +105,72 @@ h1 {
 <p>A Display of the Machine Learning Models developed as part of my Data Scientist Journey.<br>Click on the Title of the project to view teh complete code, analysis, model and findings.</p>
 
 <!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column">
-    <div class="content" align="center">
-      <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="container carousel-inner no-padding">
+    <div class="carousel-item active">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
       <h3><a href="SimilarProductsSearchEngine.html">Similar Products Search Engine</a></h3>
-      <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content" align="center">
-    <img src="chatbot.jpg" alt="Lights" height="100" width="100">
+        <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="chatbot.jpg" alt="Lights" height="100" width="100">
       <h3><a href="VoiceBot.html">AI Base Voice Bot Assistant</a></h3>
-      <p align="justify">An Intellignet Bot trained to answer the queries from the clients (voice input through mic), working on NLP Algorithms and pairwise distances similarity in the backend.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content" align="center">
-      <img src="click.jpg" alt="Click" height="100" width="100">
+      <p align="justify">An Intelligent Bot trained to answer the queries from the clients (voice input through mic), working on NLP Algorithms and pairwise distances similarity in the backend.</p>
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="click.jpg" alt="Click" height="100" width="100">
       <h3><a href="VoiceBot.html">Digital Campaign Ad Click Predictor Model</a></h3>
       <p align="justify">A Click Predictor Model built on 4 different Classification algorithm and the accuracies compared. The use case is an important ML Feature for Digital Ad Exchanges.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content" align="center">
-      <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
       <h3>Similar products Search Engine</h3>
       <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>   
     </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+      <h3>Similar products Search Engine</h3>
+      <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+      <h3>Similar products Search Engine</h3>
+      <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+      <h3>Similar products Search Engine</h3>
+      <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="similarproduct.jpg" alt="Cart" height="100" width="100">
+      <h3>Similar products Search Engine</h3>
+      <p align="justify">NLP Use Case solved with BOW Vector, Tf-Idf and Cosine Similarity. ML Based Search engine that fetches Similar products from the 180K product inventory data scraped from Amazon.</p>
+      </div>  
+    </div>
+    
   </div>
-<!-- END GRID -->
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
 </div>
-
 <div class="content">
   <h3>Data Science Skill Set</h3>
   <p>Programming languages : Python, R <br> Libraries : Python - Sklearn, seaborn, numpy, pandas. R - ggplot2, caTools </p>
